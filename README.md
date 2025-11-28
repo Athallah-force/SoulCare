@@ -59,7 +59,7 @@ Untuk memahami struktur database dan alur aplikasi, lihat diagram berikut:
 ![ERD](images/erd.png)
 
 ### UML (Use Case Diagram)
-![UML](images/uml.png)
+![UML](images/uml_baru.drawio.png)
 
 ---
 

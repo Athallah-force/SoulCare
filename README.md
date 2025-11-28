@@ -1,59 +1,70 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🌟 Aplikasi SoulCare Konsultasi Kesehatan Mental
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Selamat datang di **[SoulCare]**, platform yang menghubungkan Klien dengan Profesional untuk sesi konsultasi yang aman, terstruktur, dan mudah diakses. Aplikasi ini dirancang untuk menghadirkan pengalaman konsultasi online yang nyaman, transparan, dan efisien.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🔑 Fitur Utama Akses & Otentikasi
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Fitur-fitur ini memastikan pengguna dapat masuk dan mengakses konten sesuai peran mereka.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Dua Tipe Akun
+- **Klien**: Mencari, booking, dan menjalani sesi konsultasi.  
+- **Profesional**: Mengatur jadwal, melihat janji temu, dan mendokumentasikan sesi.
 
-## Learning Laravel
+### Sistem Login & Logout Aman
+- Password dienkripsi menggunakan **password_hash**.  
+- Setiap sesi pengguna dijaga keamanannya.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### Otorisasi Berbasis Peran
+- Klien hanya melihat **Dashboard Klien**.  
+- Profesional hanya melihat **Dashboard Profesional**.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🩺 Fitur Utama Layanan Inti (Core Service)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Fitur-fitur yang menghasilkan nilai utama dari aplikasi.
 
-### Premium Partners
+### 1. Pencarian dan Booking Sesi
+- **Filter Profesional**: Cari berdasarkan Spesialisasi, Tarif, dan Ketersediaan (AvailabilitySlot).  
+- **Manajemen Jadwal Profesional**: Atur dan perbarui slot waktu secara real-time.  
+- **Booking Otomatis**: Sesi dibuat otomatis setelah pembayaran sukses.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 2. Pembayaran dan Transaksi
+- **Integrasi Payment Gateway**: Pembayaran instan dan aman.  
+- **Status Transaksi Otomatis**: Dari "Menunggu Pembayaran" → "Terjadwal" setelah pembayaran dikonfirmasi.
 
-## Contributing
+### 3. Ruang Konsultasi Online
+- **Sesi Video/Chat In-App**: Platform komunikasi aman dan terenkripsi.  
+- **Penjadwalan Sesi**: Membuka & menutup ruang sesi sesuai `waktu_mulai` & `waktu_akhir` tabel Session.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 📝 Fitur Utama Dokumentasi & Dukungan
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Fitur penting untuk menjaga kualitas layanan dan pengalaman pengguna.
 
-## Security Vulnerabilities
+- **Catatan Klinis Aman (SessionNote)**: Hanya Profesional yang bisa membuat catatan sesi terenkripsi.  
+- **Riwayat Sesi**: Klien melihat sesi yang telah selesai; Profesional melihat riwayat semua klien.  
+- **Sistem Ulasan (Review)**: Klien bisa memberikan rating & ulasan, muncul di profil Profesional.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 📊 Diagram ERD & UML
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Untuk memahami struktur database dan alur aplikasi, lihat diagram berikut:
+
+### ERD (Entity Relationship Diagram)
+![ERD](images/erd.png)
+
+### UML (Use Case Diagram)
+![UML](images/uml.png)
+
+---
+
+## 🚀 Instalasi & Penggunaan
+
+1. Clone repository:  
+```bash
+git clone https://github.com/username/repo.git
